@@ -3,7 +3,10 @@ import './App.css';
 function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('*** handleSubmit');
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    console.log('*** handleSubmit', data);
   }
 
 
@@ -15,6 +18,8 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label>Nome</label>
         <input type="text" name="name" placeholder="name" />
+        <label>Nome</label>
+        <input type="text" name="email" placeholder="email" />
         <button type="submit">Enviar</button>
       </form>
    </div>
