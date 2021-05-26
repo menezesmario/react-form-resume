@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('*** handleSubmit');
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <div className="Title">
+        <h1>Trabalhe Conosco</h1>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <label>Nome</label>
+        <input type="text" name="name" placeholder="name" />
+        <button type="submit">Enviar</button>
+      </form>
+   </div>
   );
 }
 
