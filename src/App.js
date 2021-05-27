@@ -10,12 +10,12 @@ function App() {
     setFormValues({...formValues, [name]: value})
   }
 
-  const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    console.log('*** handleSubmit', data);
+    console.log('*** handleSubmit', data); 
   }
 
   console.log('*** formValues', formValues)
